@@ -10,6 +10,8 @@ UserService::UserService()
     user->name = "John";
     user->password = "password";
     user->email = "test@gmail.com";
+
+    this->m_user = user;
 }
 
 UserService::~UserService()
@@ -23,5 +25,5 @@ void UserService::SetUser(const User& user)
 
 User* UserService::GetUser()
 {
-    return this->user;
+    return this->m_user;
 }

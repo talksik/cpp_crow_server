@@ -25,7 +25,7 @@ class UserService
 
 private:
   // todo: database dependency
-  User* user = nullptr;
+  User* m_user = nullptr;
 
 public:
   UserService();
