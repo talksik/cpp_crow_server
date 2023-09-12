@@ -1,4 +1,4 @@
-#include "../include/crow_all.h"
+#include "include/crow_all.h"
 #include <iostream>
 
 int main() {
@@ -7,6 +7,10 @@ int main() {
   crow::SimpleApp app;
 
   CROW_ROUTE(app, "/")([]() { return "Hello world"; });
+
+  CROW_ROUTE(app, "/getuser")([]() {
+      return "adfas";
+  });
 
   app.port(3000).multithreaded().run();
 }
